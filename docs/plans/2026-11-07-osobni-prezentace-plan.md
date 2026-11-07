@@ -45,11 +45,13 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 - Fotky z **Unsplash**, stažené do `images/`, zmenšené (šířka max. ~1200 px), `loading="lazy"`, `width`/`height`, popisný `alt`
 - Autory fotek uvést v `README.md` (licence Unsplash to nevyžaduje, ale je to slušnost)
-- **Fotka Aleše** (hero, O mně) zůstává zástupná, dokud nedodá vlastní – cizí člověk se za něj nevydává
+- **Fotka Aleše:** cizí člověk se za něj nevydává. V hero je dočasně fotka pracovního stolu bez obličeje,
+  v O mně zůstává zástupná silueta – obojí nahradit Alešovým portrétem, až ho dodá
 - **Citace klientů** bez fotek obličejů (jsou smyšlené) – místo toho kroužek s iniciálami
 - Fotky se doplňují v rámci Tasků 5, 6 a 8 (viz níže)
 
 **Použité fotky** (pro README v Tasku 11):
+- `images/hero-pracovni-stul.webp` – Olena Bohovyk, https://unsplash.com/photos/dIMJWLx1YbE
 - `images/konzultace.webp` – Headway, https://unsplash.com/photos/5QgIuuBxKwM
 
 ## Rozhraní (názvy, které se používají napříč Tasky)
