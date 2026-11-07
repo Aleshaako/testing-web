@@ -89,8 +89,23 @@ function animateCounter(counter) {
   requestAnimationFrame(step);
 }
 
-// Rozbalovací otázky v FAQ (Task 7)
-function initFaq() {}
+// Rozbalovací otázky v FAQ. Bez JavaScriptu jsou odpovědi vidět (v HTML je aria-expanded="true"),
+// tady je na začátku zavřeme a tlačítko pak otevírá a zavírá jednotlivé odpovědi.
+function initFaq() {
+  document.querySelectorAll('[data-faq-item]').forEach((item) => {
+    const button = item.querySelector('button');
+
+    const setOpen = (open) => {
+      button.setAttribute('aria-expanded', open);
+      item.toggleAttribute('data-open', open);
+    };
+
+    setOpen(false);
+    button.addEventListener('click', () => {
+      setOpen(button.getAttribute('aria-expanded') !== 'true');
+    });
+  });
+}
 
 // Kontrola a odeslání kontaktního formuláře (Task 9)
 function initContactForm() {}

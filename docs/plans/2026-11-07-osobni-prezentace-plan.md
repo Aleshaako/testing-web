@@ -144,10 +144,10 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 **Soubory:** `index.html` (`#faq`), `js/main.js` (`initFaq`)
 
-- [ ] 5 otázek ze specifikace; tlačítka s `aria-expanded` + panely s odpověďmi
-- [ ] `initFaq()`: přepíná otevření s plynulou animací výšky; bez JS jsou odpovědi vidět
-- [ ] **Kontrola:** ovládání klávesnicí, šipka/ikona se otáčí
-- [ ] **Commit:** `Přidej FAQ s rozbalovacími odpověďmi`
+- [x] 5 otázek ze specifikace; tlačítka s `aria-expanded` + panely s odpověďmi
+- [x] `initFaq()`: přepíná otevření s plynulou animací výšky; bez JS jsou odpovědi vidět
+- [x] **Kontrola:** ovládání klávesnicí, šipka/ikona se otáčí
+- [x] **Commit:** `Přidej FAQ s rozbalovacími odpověďmi`
 
 ### Task 8: O mně
 
