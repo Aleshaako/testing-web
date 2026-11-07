@@ -62,13 +62,13 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 **Soubory:** vytvořit `index.html`, `js/main.js`, `css/custom.css`, `images/favicon.svg`, `images/foto-placeholder.svg`
 
-- [ ] `index.html`: `<head>` s meta (charset, viewport, title, description, Open Graph title/description), favicon, Google Fonts, Tailwind CDN, `@theme` s proměnnými z bloku Rozhraní, odkaz na `css/custom.css`, `js/main.js` s `defer`
-- [ ] Inline skript v `<head>`: `document.documentElement.classList.add('js')`
-- [ ] `<body>`: `header`, `main` s prázdnými `<section>` se všemi ID (jen nadpis h2), `footer` s `<span data-year>`
-- [ ] `favicon.svg`: iniciály „AH“ v primární barvě; `foto-placeholder.svg`: neutrální silueta / gradient
-- [ ] `main.js`: kostra s prázdnými `init…()` funkcemi, `setYear()` hotová
-- [ ] **Kontrola:** stránka se načte, žádné chyby v Console, nadpisy v Plus Jakarta Sans, „ř ů ě“ se zobrazují správně, v patičce je 2026
-- [ ] **Commit:** `Založ kostru stránky s Tailwindem a fonty`
+- [x] `index.html`: `<head>` s meta (charset, viewport, title, description, Open Graph title/description), favicon, Google Fonts, Tailwind CDN, `@theme` s proměnnými z bloku Rozhraní, odkaz na `css/custom.css`, `js/main.js` s `defer`
+- [x] Inline skript v `<head>`: `document.documentElement.classList.add('js')`
+- [x] `<body>`: `header`, `main` s prázdnými `<section>` se všemi ID (jen nadpis h2), `footer` s `<span data-year>`
+- [x] `favicon.svg`: iniciály „AH“ v primární barvě; `foto-placeholder.svg`: neutrální silueta / gradient
+- [x] `main.js`: kostra s prázdnými `init…()` funkcemi, `setYear()` hotová
+- [x] **Kontrola:** stránka se načte, žádné chyby v Console, nadpisy v Plus Jakarta Sans, „ř ů ě“ se zobrazují správně, v patičce je 2026
+- [x] **Commit:** `Založ kostru stránky s Tailwindem a fonty`
 
 ### Task 2: Navigace
 

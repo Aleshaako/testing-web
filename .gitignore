@@ -21,3 +21,6 @@ Icon?
 
 # Pro budoucí build Tailwindu
 node_modules/
+
+# Dočasné soubory z kontroly v prohlížeči (Playwright)
+.playwright-mcp/
