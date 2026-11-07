@@ -49,6 +49,9 @@ Místo automatických testů kontrolujeme v prohlížeči:
 - **Citace klientů** bez fotek obličejů (jsou smyšlené) – místo toho kroužek s iniciálami
 - Fotky se doplňují v rámci Tasků 5, 6 a 8 (viz níže)
 
+**Použité fotky** (pro README v Tasku 11):
+- `images/konzultace.webp` – Headway, https://unsplash.com/photos/5QgIuuBxKwM
+
 ## Rozhraní (názvy, které se používají napříč Tasky)
 
 **Theme proměnné (Task 1):** `--color-primary-50…900` (indigo), `--color-accent-400/500/600` (korál),
@@ -115,11 +118,11 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 **Soubory:** `index.html` (`#spoluprace`)
 
-- [ ] 4 kroky: Konzultace → Návrh → Spuštění → Průběžná péče; číslo, název, 1–2 věty
-- [ ] Spojovací linka: svisle na mobilu, vodorovně od `lg`
-- [ ] Fotka z Unsplash: konzultace (dva lidé nad notebookem / u stolu)
-- [ ] **Kontrola:** čitelné na všech šířkách
-- [ ] **Commit:** `Přidej sekci Jak spolupracujeme`
+- [x] 4 kroky: Konzultace → Návrh → Spuštění → Průběžná péče; číslo, název, 1–2 věty
+- [x] Spojovací linka: svisle na mobilu, vodorovně od `lg`
+- [x] Fotka z Unsplash: konzultace (dva lidé nad notebookem / u stolu)
+- [x] **Kontrola:** čitelné na všech šířkách
+- [x] **Commit:** `Přidej sekci Jak spolupracujeme`
 
 ### Task 6: Reference
 

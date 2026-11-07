@@ -424,8 +424,72 @@
       </div>
     </section>
 
-    <section id="spoluprace" class="scroll-mt-20">
-      <h2 class="font-display text-3xl font-bold">Jak spolupracujeme</h2>
+    <!-- Jak spolupracujeme: úvod s fotkou + 4 kroky propojené linkou -->
+    <section id="spoluprace" class="scroll-mt-20 bg-gradient-to-b from-white via-primary-50 to-white py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p class="text-sm font-semibold tracking-wider text-primary-600 uppercase">Jak spolupracujeme</p>
+            <h2 class="mt-3 font-display text-[clamp(2rem,1.5rem+2vw,3rem)] leading-tight font-extrabold tracking-tight text-slate-900">
+              Od první kávy po první zákazníky
+            </h2>
+            <p class="mt-4 text-lg leading-relaxed text-slate-600">
+              Žádné složité smlouvy ani odborné řeči. Celá spolupráce má čtyři jednoduché kroky
+              a v každém přesně víte, co se děje a co bude následovat.
+            </p>
+          </div>
+
+          <!-- Fotka: Headway, Unsplash -->
+          <div class="relative">
+            <img src="images/konzultace.webp" alt="Rozhovor nad notebookem při konzultaci" width="1200" height="800" loading="lazy"
+              class="aspect-[3/2] w-full rounded-3xl object-cover shadow-2xl shadow-primary-900/15">
+            <p class="absolute bottom-4 left-4 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-slate-900 shadow-lg backdrop-blur">
+              První konzultace je nezávazná
+            </p>
+          </div>
+        </div>
+
+        <!-- Kroky. Linka (pseudoprvek before:) vede za čísly: na mobilu svisle, od lg vodorovně
+             a na konci se ztrácí – péče pokračuje i po spuštění -->
+        <ol class="relative mt-16 grid gap-10 lg:grid-cols-4 lg:gap-8
+          before:absolute before:top-0 before:bottom-0 before:left-6 before:w-0.5 before:-translate-x-1/2
+          before:bg-gradient-to-b before:from-primary-500 before:via-fuchsia-500 before:to-accent-500/0
+          lg:before:top-6 lg:before:right-0 lg:before:bottom-auto lg:before:h-0.5 lg:before:w-auto
+          lg:before:translate-x-0 lg:before:-translate-y-1/2 lg:before:bg-gradient-to-r">
+
+          <li class="relative flex gap-6 lg:block">
+            <span class="relative grid size-12 shrink-0 place-items-center rounded-full bg-brand-gradient font-display text-lg font-bold text-white shadow-lg shadow-fuchsia-600/25">1</span>
+            <div class="lg:mt-6">
+              <h3 class="font-display text-xl font-bold text-slate-900">Konzultace</h3>
+              <p class="mt-2 leading-relaxed text-slate-600">Sejdeme se osobně nebo online a probereme, co vaše firma potřebuje. Nezávazně a lidsky.</p>
+            </div>
+          </li>
+
+          <li class="relative flex gap-6 lg:block">
+            <span class="relative grid size-12 shrink-0 place-items-center rounded-full bg-brand-gradient font-display text-lg font-bold text-white shadow-lg shadow-fuchsia-600/25">2</span>
+            <div class="lg:mt-6">
+              <h3 class="font-display text-xl font-bold text-slate-900">Návrh</h3>
+              <p class="mt-2 leading-relaxed text-slate-600">Připravím návrh webu i reklamy a předem vám řeknu, kolik to bude stát a jak dlouho to potrvá.</p>
+            </div>
+          </li>
+
+          <li class="relative flex gap-6 lg:block">
+            <span class="relative grid size-12 shrink-0 place-items-center rounded-full bg-brand-gradient font-display text-lg font-bold text-white shadow-lg shadow-fuchsia-600/25">3</span>
+            <div class="lg:mt-6">
+              <h3 class="font-display text-xl font-bold text-slate-900">Spuštění</h3>
+              <p class="mt-2 leading-relaxed text-slate-600">Postavím web, spustím reklamu a všechno pečlivě vyzkouším. Vy jen schválíte výsledek.</p>
+            </div>
+          </li>
+
+          <li class="relative flex gap-6 lg:block">
+            <span class="relative grid size-12 shrink-0 place-items-center rounded-full bg-brand-gradient font-display text-lg font-bold text-white shadow-lg shadow-fuchsia-600/25">4</span>
+            <div class="lg:mt-6">
+              <h3 class="font-display text-xl font-bold text-slate-900">Průběžná péče</h3>
+              <p class="mt-2 leading-relaxed text-slate-600">Sleduji výsledky, vylepšuji reklamu a starám se o web. Každý měsíc dostanete srozumitelný přehled.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
     </section>
 
     <section id="reference" class="scroll-mt-20">
