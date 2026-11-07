@@ -53,6 +53,9 @@ Místo automatických testů kontrolujeme v prohlížeči:
 **Použité fotky** (pro README v Tasku 11):
 - `images/hero-pracovni-stul.webp` – Olena Bohovyk, https://unsplash.com/photos/dIMJWLx1YbE
 - `images/konzultace.webp` – Headway, https://unsplash.com/photos/5QgIuuBxKwM
+- `images/ref-kavarna.webp` – ANNIE HATUANH, https://unsplash.com/photos/yy1k8ErfLYQ
+- `images/ref-autoservis.webp` – Mehmet Talha Onuk, https://unsplash.com/photos/8t6tk7LYLrE
+- `images/ref-truhlarstvi.webp` – HENG YIN, https://unsplash.com/photos/KKY0GrQPqVo
 
 ## Rozhraní (názvy, které se používají napříč Tasky)
 
@@ -130,12 +133,12 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 **Soubory:** `index.html` (`#reference`)
 
-- [ ] Komentář `<!-- DOČASNÉ: smyšlené reference, nahradit skutečnými -->`
-- [ ] 3 ukázky: rámeček prohlížeče (2×) / telefonu (1×) s abstraktním náhledem webu v CSS, typ firmy, popis, výsledek; jemný náklon, hover narovná a zvedne
-- [ ] Ke každé ukázce fotka z Unsplash z prostředí klienta (např. kavárna, autoservis, truhlářská dílna)
-- [ ] 2–3 citace klientů (smyšlená jména, typ firmy) – místo fotek kroužek s iniciálami
-- [ ] **Kontrola:** žádné reálné firmy; hover plynulý
-- [ ] **Commit:** `Přidej sekci Reference`
+- [x] Komentář `<!-- DOČASNÉ: smyšlené reference, nahradit skutečnými -->`
+- [x] 3 ukázky: rámeček prohlížeče (2×) / telefonu (1×) s abstraktním náhledem webu v CSS, typ firmy, popis, výsledek; jemný náklon, hover narovná a zvedne
+- [x] Ke každé ukázce fotka z Unsplash z prostředí klienta (např. kavárna, autoservis, truhlářská dílna)
+- [x] 2–3 citace klientů (smyšlená jména, typ firmy) – místo fotek kroužek s iniciálami
+- [x] **Kontrola:** žádné reálné firmy; hover plynulý
+- [x] **Commit:** `Přidej sekci Reference`
 
 ### Task 7: FAQ
 
