@@ -162,12 +162,12 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 **Soubory:** `index.html` (`#kontakt`), `js/main.js` (`initContactForm`)
 
-- [ ] Tmavé pozadí; vlevo výzva + `tel:` a `mailto:` (placeholder údaje), vpravo formulář: jméno*, e-mail*, telefon, zpráva*; `label` u všech polí; `novalidate` na formuláři
-- [ ] `initContactForm()`: při odeslání `preventDefault`; ořízne mezery; povinná pole neprázdná; e-mail odpovídá `^[^\s@]+@[^\s@]+\.[^\s@]+$`; chyba se zobrazí pod polem (`aria-invalid`, `aria-describedby`); při úspěchu formulář nahradí hláška „Děkujeme, ozvu se vám do 24 hodin.“
-- [ ] Komentář `// TODO: napojit na Formspree nebo jinou službu`
-- [ ] Patička: jméno, telefon, e-mail, IČO (placeholder), © `<span data-year>`
-- [ ] **Kontrola:** bod 4 z Review Focus; nic se neodesílá (záložka Network)
-- [ ] **Commit:** `Přidej kontaktní sekci s formulářem a patičku`
+- [x] Tmavé pozadí; vlevo výzva + `tel:` a `mailto:` (placeholder údaje), vpravo formulář: jméno*, e-mail*, telefon, zpráva*; `label` u všech polí; `novalidate` na formuláři
+- [x] `initContactForm()`: při odeslání `preventDefault`; ořízne mezery; povinná pole neprázdná; e-mail odpovídá `^[^\s@]+@[^\s@]+\.[^\s@]+$`; chyba se zobrazí pod polem (`aria-invalid`, `aria-describedby`); při úspěchu formulář nahradí hláška „Děkujeme, ozvu se vám do 24 hodin.“
+- [x] Komentář `// TODO: napojit na Formspree nebo jinou službu`
+- [x] Patička: jméno, telefon, e-mail, IČO (placeholder), © `<span data-year>`
+- [x] **Kontrola:** bod 4 z Review Focus; nic se neodesílá (záložka Network)
+- [x] **Commit:** `Přidej kontaktní sekci s formulářem a patičku`
 
 ### Task 10: Animace při scrollování
 

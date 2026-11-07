@@ -841,13 +841,117 @@
       </div>
     </section>
 
-    <section id="kontakt" class="scroll-mt-20">
-      <h2 class="font-display text-3xl font-bold">Kontakt</h2>
+    <!-- Kontakt: tmavé „finále“ stránky. DOČASNÉ: telefon a e-mail jsou smyšlené, nahradit skutečnými. -->
+    <section id="kontakt" class="relative isolate scroll-mt-20 overflow-hidden bg-slate-950 py-20 text-white sm:py-28">
+      <div class="pointer-events-none absolute -top-32 -left-32 -z-10 size-[30rem] rounded-full bg-primary-600 opacity-30 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-32 -bottom-32 -z-10 size-[30rem] rounded-full bg-fuchsia-600 opacity-25 blur-3xl" aria-hidden="true"></div>
+
+      <div class="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+        <!-- Výzva a přímý kontakt -->
+        <div>
+          <p class="text-sm font-semibold tracking-wider text-primary-300 uppercase">Kontakt</p>
+          <h2 class="mt-3 font-display text-[clamp(2rem,1.5rem+2vw,3rem)] leading-tight font-extrabold tracking-tight">
+            Pojďme vaší firmě přivést víc zákazníků
+          </h2>
+          <p class="mt-4 text-lg leading-relaxed text-slate-300">
+            Napište mi pár slov o tom, co děláte a co potřebujete. Ozvu se do 24 hodin a domluvíme si nezávaznou konzultaci.
+          </p>
+
+          <ul class="mt-10 space-y-4">
+            <li>
+              <a href="tel:+420000000000" class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-white/25 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-300">
+                <span class="grid size-12 shrink-0 place-items-center rounded-xl bg-brand-gradient" aria-hidden="true">
+                  <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+                </span>
+                <span>
+                  <span class="block text-sm text-slate-400">Zavolejte mi</span>
+                  <span class="block font-display text-xl font-bold">+420&nbsp;000&nbsp;000&nbsp;000</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:ahoj@example.com" class="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-white/25 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-300">
+                <span class="grid size-12 shrink-0 place-items-center rounded-xl bg-brand-gradient" aria-hidden="true">
+                  <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                </span>
+                <span>
+                  <span class="block text-sm text-slate-400">Napište mi</span>
+                  <span class="block font-display text-xl font-bold">ahoj@example.com</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Formulář. Kontrolu dělá JavaScript (novalidate vypne bublinky prohlížeče).
+             Chybové hlášky jsou propojené s polem přes aria-describedby, aby je přečetla i čtečka obrazovky. -->
+        <div class="flex flex-col justify-center rounded-3xl bg-white p-6 text-slate-900 shadow-2xl sm:p-10">
+          <form data-contact-form novalidate class="space-y-6">
+            <div>
+              <label for="jmeno" class="block font-semibold">Jméno <span class="text-red-600" aria-hidden="true">*</span></label>
+              <input type="text" id="jmeno" name="jmeno" autocomplete="name" required
+                aria-describedby="jmeno-chyba" data-error="Vyplňte prosím své jméno."
+                class="mt-2 block w-full rounded-xl border border-slate-300 px-4 py-3 text-base transition focus:border-primary-600 focus:ring-4 focus:ring-primary-600/15 focus:outline-none aria-invalid:border-red-600 aria-invalid:ring-4 aria-invalid:ring-red-600/10">
+              <p id="jmeno-chyba" class="mt-2 text-sm font-medium text-red-600" hidden></p>
+            </div>
+
+            <div>
+              <label for="email" class="block font-semibold">E-mail <span class="text-red-600" aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required
+                aria-describedby="email-chyba" data-error="Vyplňte prosím svůj e-mail."
+                class="mt-2 block w-full rounded-xl border border-slate-300 px-4 py-3 text-base transition focus:border-primary-600 focus:ring-4 focus:ring-primary-600/15 focus:outline-none aria-invalid:border-red-600 aria-invalid:ring-4 aria-invalid:ring-red-600/10">
+              <p id="email-chyba" class="mt-2 text-sm font-medium text-red-600" hidden></p>
+            </div>
+
+            <div>
+              <label for="telefon" class="block font-semibold">Telefon <span class="font-normal text-slate-500">(nepovinné)</span></label>
+              <input type="tel" id="telefon" name="telefon" autocomplete="tel"
+                class="mt-2 block w-full rounded-xl border border-slate-300 px-4 py-3 text-base transition focus:border-primary-600 focus:ring-4 focus:ring-primary-600/15 focus:outline-none">
+            </div>
+
+            <div>
+              <label for="zprava" class="block font-semibold">Zpráva <span class="text-red-600" aria-hidden="true">*</span></label>
+              <textarea id="zprava" name="zprava" rows="4" required
+                aria-describedby="zprava-chyba" data-error="Napište mi prosím, s čím vám můžu pomoct."
+                class="mt-2 block w-full rounded-xl border border-slate-300 px-4 py-3 text-base transition focus:border-primary-600 focus:ring-4 focus:ring-primary-600/15 focus:outline-none aria-invalid:border-red-600 aria-invalid:ring-4 aria-invalid:ring-red-600/10"></textarea>
+              <p id="zprava-chyba" class="mt-2 text-sm font-medium text-red-600" hidden></p>
+            </div>
+
+            <p class="text-sm text-slate-500">Pole označená <span class="text-red-600">*</span> jsou povinná.</p>
+
+            <button type="submit"
+              class="w-full rounded-full bg-brand-gradient px-7 py-4 font-semibold text-white shadow-lg shadow-fuchsia-600/25 transition hover:scale-[1.02] hover:shadow-xl hover:shadow-fuchsia-600/35 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-600">
+              Odeslat
+            </button>
+          </form>
+
+          <!-- Poděkování po odeslání (tabindex="-1", aby na něj JS mohl přesunout fokus) -->
+          <div data-contact-success role="status" tabindex="-1" hidden class="py-10 text-center focus:outline-none">
+            <span class="mx-auto grid size-16 place-items-center rounded-full bg-emerald-100 text-emerald-600" aria-hidden="true">
+              <svg class="size-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+            </span>
+            <p class="mt-6 font-display text-2xl font-bold">Děkujeme, ozvu se vám do 24 hodin.</p>
+            <p class="mt-2 text-slate-600">Mezitím se můžete podívat na <a href="#reference" class="font-semibold text-primary-700 underline underline-offset-4 hover:text-primary-900">ukázky mé práce</a>.</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© <span data-year>2026</span> Aleš Hendrych</p>
+  <!-- Patička. DOČASNÉ: telefon, e-mail a IČO jsou smyšlené. -->
+  <footer class="border-t border-white/10 bg-slate-950 py-10 text-sm text-slate-400">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+      <div>
+        <p class="font-display text-lg font-bold text-white">Aleš Hendrych</p>
+        <p class="mt-1">Weby a reklama na Facebooku a Instagramu</p>
+      </div>
+      <ul class="flex flex-col gap-2 sm:flex-row sm:gap-6">
+        <li><a href="tel:+420000000000" class="rounded hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-300">+420&nbsp;000&nbsp;000&nbsp;000</a></li>
+        <li><a href="mailto:ahoj@example.com" class="rounded hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-300">ahoj@example.com</a></li>
+        <li>IČO: 00000000</li>
+      </ul>
+      <p>© <span data-year>2026</span> Aleš Hendrych</p>
+    </div>
   </footer>
 
 </body>

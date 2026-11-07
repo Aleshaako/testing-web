@@ -107,8 +107,67 @@ function initFaq() {
   });
 }
 
-// Kontrola a odeslání kontaktního formuláře (Task 9)
-function initContactForm() {}
+// Kontrola kontaktního formuláře. Zatím se nic nikam neodesílá – po úspěšné kontrole
+// se jen místo formuláře ukáže poděkování.
+function initContactForm() {
+  const form = document.querySelector('[data-contact-form]');
+  const success = document.querySelector('[data-contact-success]');
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // Kontrolujeme jen pole, která mají chybovou hlášku (povinná pole)
+  const fields = form.querySelectorAll('[data-error]');
+
+  // Vrátí text chyby, nebo prázdný text, když je pole v pořádku.
+  // trim() odstraní mezery na začátku a konci, takže pole jen z mezer se bere jako prázdné.
+  const validate = (field) => {
+    const value = field.value.trim();
+    if (value === '') return field.dataset.error;
+    if (field.type === 'email' && !emailPattern.test(value)) {
+      return 'Zkontrolujte prosím e-mail, něco v něm chybí (např. jan@firma.cz).';
+    }
+    return '';
+  };
+
+  // Zobrazí nebo schová chybu pod polem a označí pole pro čtečky obrazovky
+  const showError = (field, message) => {
+    const error = document.getElementById(field.getAttribute('aria-describedby'));
+    error.textContent = message;
+    error.hidden = !message;
+    if (message) {
+      field.setAttribute('aria-invalid', 'true');
+    } else {
+      field.removeAttribute('aria-invalid');
+    }
+  };
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    let firstInvalid = null;
+    fields.forEach((field) => {
+      const message = validate(field);
+      showError(field, message);
+      if (message && !firstInvalid) firstInvalid = field;
+    });
+
+    // Při chybě přesuneme kurzor do prvního špatně vyplněného pole
+    if (firstInvalid) {
+      firstInvalid.focus();
+      return;
+    }
+
+    // TODO: napojit na Formspree nebo jinou službu
+    form.hidden = true;
+    success.hidden = false;
+    success.focus();
+  });
+
+  // Když uživatel chybu opravuje, hláška zmizí hned při psaní
+  fields.forEach((field) => {
+    field.addEventListener('input', () => {
+      if (field.hasAttribute('aria-invalid')) showError(field, validate(field));
+    });
+  });
+}
 
 // Vloží aktuální rok do všech prvků s atributem data-year
 function setYear() {
