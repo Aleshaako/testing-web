@@ -74,12 +74,12 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 **Soubory:** `index.html` (header), `js/main.js` (`initNav`)
 
-- [ ] Desktop: jméno vlevo, odkazy na sekce, tlačítko „Nezávazná konzultace“ (akcent) → `#kontakt`
-- [ ] Sticky; po odscrollování > 20 px třída se `bg-white/80 backdrop-blur` a stínem
-- [ ] Mobil (< `md`): hamburger tlačítko s `aria-expanded` a `aria-controls`, plynulé vysunutí menu, zavření po kliku na odkaz a klávesou Esc
-- [ ] `html { scroll-behavior: smooth }` (jen bez reduced-motion) a `scroll-margin-top` na sekcích
-- [ ] **Kontrola:** body 2 a 3 z Review Focus; menu ovladatelné klávesnicí (Tab, Enter)
-- [ ] **Commit:** `Přidej navigaci s mobilním menu`
+- [x] Desktop: jméno vlevo, odkazy na sekce, tlačítko „Nezávazná konzultace“ (akcent) → `#kontakt`
+- [x] Sticky; po odscrollování > 20 px třída se `bg-white/80 backdrop-blur` a stínem
+- [x] Mobil (< `md`): hamburger tlačítko s `aria-expanded` a `aria-controls`, plynulé vysunutí menu, zavření po kliku na odkaz a klávesou Esc
+- [x] `html { scroll-behavior: smooth }` (jen bez reduced-motion) a `scroll-margin-top` na sekcích
+- [x] **Kontrola:** body 2 a 3 z Review Focus; menu ovladatelné klávesnicí (Tab, Enter)
+- [x] **Commit:** `Přidej navigaci s mobilním menu`
 
 ### Task 3: Hero
 

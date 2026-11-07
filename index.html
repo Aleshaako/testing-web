@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="cs">
+<html lang="cs" class="motion-safe:scroll-smooth">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,11 +42,16 @@
       --color-primary-800: #3730a3;
       --color-primary-900: #312e81;
 
-      /* Akcentová barva – korálová (jen tlačítka a důležité detaily) */
+      /* Akcentová barva – korálová (jen tlačítka a důležité detaily).
+         Tlačítka s bílým textem používají 600/700 – světlejší odstíny nemají dost kontrastu. */
       --color-accent-400: #fb8a6e;
       --color-accent-500: #f76b4f;
-      --color-accent-600: #e5533a;
+      --color-accent-600: #cf3f28;
+      --color-accent-700: #b23520;
     }
+
+    /* Varianta js: – styl platí jen když běží JavaScript (např. js:invisible) */
+    @custom-variant js (:where(.js) &);
   </style>
 
   <link rel="stylesheet" href="css/custom.css">
@@ -54,40 +59,91 @@
 </head>
 <body class="bg-white font-sans text-slate-900 antialiased">
 
-  <header>
-    <p class="font-display text-xl font-bold">Aleš Hendrych</p>
+  <!-- Navigace: po odscrollování JS přidá atribut data-scrolled → bílé poloprůhledné pozadí -->
+  <header data-header class="sticky top-0 z-50 transition-[background-color,box-shadow] duration-300 data-scrolled:bg-white/80 data-scrolled:shadow-md data-scrolled:backdrop-blur-md">
+    <nav aria-label="Hlavní navigace" class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <a href="#uvod" class="rounded font-display text-xl font-bold text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-600">
+        Aleš Hendrych
+      </a>
+
+      <!-- Odkazy pro tablet a desktop -->
+      <div class="hidden items-center gap-8 md:flex">
+        <ul class="flex items-center gap-6 text-sm font-medium text-slate-700">
+          <li><a href="#sluzby" class="rounded transition-colors hover:text-primary-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-600">Služby</a></li>
+          <li><a href="#spoluprace" class="rounded transition-colors hover:text-primary-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-600">Spolupráce</a></li>
+          <li><a href="#reference" class="rounded transition-colors hover:text-primary-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-600">Reference</a></li>
+          <li><a href="#faq" class="rounded transition-colors hover:text-primary-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-600">FAQ</a></li>
+          <li><a href="#o-mne" class="rounded transition-colors hover:text-primary-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-600">O mně</a></li>
+        </ul>
+        <!-- Tlačítko až od šířky lg, na tabletu by se nevešlo -->
+        <a href="#kontakt" class="hidden rounded-full bg-accent-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:scale-105 hover:bg-accent-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-600 lg:inline-flex">
+          Nezávazná konzultace
+        </a>
+      </div>
+
+      <!-- Hamburger tlačítko jen na mobilu a jen s JavaScriptem (bez JS je menu rovnou rozbalené) -->
+      <button type="button" data-menu-button aria-expanded="false" aria-controls="mobilni-menu" aria-label="Otevřít menu"
+        class="group hidden rounded-lg p-2 text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 js:max-md:inline-flex">
+        <!-- Ikona tří čárek (menu zavřené) -->
+        <svg class="size-6 group-aria-expanded:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+        <!-- Ikona křížku (menu otevřené) -->
+        <svg class="hidden size-6 group-aria-expanded:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobilní menu: plynulé vysunutí pomocí výšky řádku mřížky (0fr → 1fr) -->
+    <div id="mobilni-menu" class="grid js:absolute js:inset-x-0 js:top-full transition-[grid-template-rows,visibility] duration-300 md:hidden js:invisible js:grid-rows-[0fr] data-open:visible data-open:grid-rows-[1fr]">
+      <div class="min-h-0 overflow-hidden">
+        <ul class="space-y-1 border-t border-slate-200 bg-white px-4 py-4 shadow-lg">
+          <li><a href="#sluzby" class="block rounded-lg px-3 py-3 font-medium text-slate-800 hover:bg-primary-50 focus-visible:outline-2 focus-visible:outline-primary-600">Služby</a></li>
+          <li><a href="#spoluprace" class="block rounded-lg px-3 py-3 font-medium text-slate-800 hover:bg-primary-50 focus-visible:outline-2 focus-visible:outline-primary-600">Jak spolupracujeme</a></li>
+          <li><a href="#reference" class="block rounded-lg px-3 py-3 font-medium text-slate-800 hover:bg-primary-50 focus-visible:outline-2 focus-visible:outline-primary-600">Reference</a></li>
+          <li><a href="#faq" class="block rounded-lg px-3 py-3 font-medium text-slate-800 hover:bg-primary-50 focus-visible:outline-2 focus-visible:outline-primary-600">Časté otázky</a></li>
+          <li><a href="#o-mne" class="block rounded-lg px-3 py-3 font-medium text-slate-800 hover:bg-primary-50 focus-visible:outline-2 focus-visible:outline-primary-600">O mně</a></li>
+          <li class="pt-2">
+            <a href="#kontakt" class="block rounded-full bg-accent-600 px-5 py-3 text-center font-semibold text-white hover:bg-accent-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-600">
+              Nezávazná konzultace
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section id="uvod">
+    <section id="uvod" class="scroll-mt-20">
       <h2 class="font-display text-3xl font-bold">Úvod</h2>
     </section>
 
-    <section id="proc">
+    <section id="proc" class="scroll-mt-20">
       <h2 class="font-display text-3xl font-bold">Proč se vám ozve víc zákazníků</h2>
     </section>
 
-    <section id="sluzby">
+    <section id="sluzby" class="scroll-mt-20">
       <h2 class="font-display text-3xl font-bold">Služby</h2>
     </section>
 
-    <section id="spoluprace">
+    <section id="spoluprace" class="scroll-mt-20">
       <h2 class="font-display text-3xl font-bold">Jak spolupracujeme</h2>
     </section>
 
-    <section id="reference">
+    <section id="reference" class="scroll-mt-20">
       <h2 class="font-display text-3xl font-bold">Reference</h2>
     </section>
 
-    <section id="faq">
+    <section id="faq" class="scroll-mt-20">
       <h2 class="font-display text-3xl font-bold">Časté otázky</h2>
     </section>
 
-    <section id="o-mne">
+    <section id="o-mne" class="scroll-mt-20">
       <h2 class="font-display text-3xl font-bold">O mně</h2>
     </section>
 
-    <section id="kontakt">
+    <section id="kontakt" class="scroll-mt-20">
       <h2 class="font-display text-3xl font-bold">Kontakt</h2>
     </section>
   </main>
