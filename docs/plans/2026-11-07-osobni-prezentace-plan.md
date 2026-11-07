@@ -41,6 +41,14 @@ Místo automatických testů kontrolujeme v prohlížeči:
 4. **Formulář** → pole jen z mezer = prázdné; neplatný e-mail ukáže chybu u pole; opakované kliknutí na Odeslat nezpůsobí chybu. Ověřit v Tasku 9.
 5. **Úzký displej 320 px a dlouhá česká slova v nadpisech** → nic nepřetéká do strany. Ověřit v Tasku 11.
 
+## Fotky (rozhodnuto 2026-11-07)
+
+- Fotky z **Unsplash**, stažené do `images/`, zmenšené (šířka max. ~1200 px), `loading="lazy"`, `width`/`height`, popisný `alt`
+- Autory fotek uvést v `README.md` (licence Unsplash to nevyžaduje, ale je to slušnost)
+- **Fotka Aleše** (hero, O mně) zůstává zástupná, dokud nedodá vlastní – cizí člověk se za něj nevydává
+- **Citace klientů** bez fotek obličejů (jsou smyšlené) – místo toho kroužek s iniciálami
+- Fotky se doplňují v rámci Tasků 5, 6 a 8 (viz níže)
+
 ## Rozhraní (názvy, které se používají napříč Tasky)
 
 **Theme proměnné (Task 1):** `--color-primary-50…900` (indigo), `--color-accent-400/500/600` (korál),
@@ -109,6 +117,7 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 - [ ] 4 kroky: Konzultace → Návrh → Spuštění → Průběžná péče; číslo, název, 1–2 věty
 - [ ] Spojovací linka: svisle na mobilu, vodorovně od `lg`
+- [ ] Fotka z Unsplash: konzultace (dva lidé nad notebookem / u stolu)
 - [ ] **Kontrola:** čitelné na všech šířkách
 - [ ] **Commit:** `Přidej sekci Jak spolupracujeme`
 
@@ -118,7 +127,8 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 - [ ] Komentář `<!-- DOČASNÉ: smyšlené reference, nahradit skutečnými -->`
 - [ ] 3 ukázky: rámeček prohlížeče (2×) / telefonu (1×) s abstraktním náhledem webu v CSS, typ firmy, popis, výsledek; jemný náklon, hover narovná a zvedne
-- [ ] 2–3 citace klientů (smyšlená jména, typ firmy)
+- [ ] Ke každé ukázce fotka z Unsplash z prostředí klienta (např. kavárna, autoservis, truhlářská dílna)
+- [ ] 2–3 citace klientů (smyšlená jména, typ firmy) – místo fotek kroužek s iniciálami
 - [ ] **Kontrola:** žádné reálné firmy; hover plynulý
 - [ ] **Commit:** `Přidej sekci Reference`
 
@@ -136,6 +146,7 @@ Místo automatických testů kontrolujeme v prohlížeči:
 **Soubory:** `index.html` (`#o-mne`)
 
 - [ ] Fotka (placeholder) + 3–4 lidské věty o Alešovi a přístupu „parťáka“
+- [ ] Doplňková fotka z Unsplash: pracovní stůl / notebook / káva (atmosféra, ne Aleš)
 - [ ] **Commit:** `Přidej sekci O mně`
 
 ### Task 9: Kontakt + formulář
