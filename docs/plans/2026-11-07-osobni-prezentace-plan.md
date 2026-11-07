@@ -56,6 +56,7 @@ Místo automatických testů kontrolujeme v prohlížeči:
 - `images/ref-kavarna.webp` – ANNIE HATUANH, https://unsplash.com/photos/yy1k8ErfLYQ
 - `images/ref-autoservis.webp` – Mehmet Talha Onuk, https://unsplash.com/photos/8t6tk7LYLrE
 - `images/ref-truhlarstvi.webp` – HENG YIN, https://unsplash.com/photos/KKY0GrQPqVo
+- `images/o-mne-stul.webp` – ian dooley, https://unsplash.com/photos/DJ7bWa-Gwks
 
 ## Rozhraní (názvy, které se používají napříč Tasky)
 
@@ -153,9 +154,9 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 **Soubory:** `index.html` (`#o-mne`)
 
-- [ ] Fotka (placeholder) + 3–4 lidské věty o Alešovi a přístupu „parťáka“
-- [ ] Doplňková fotka z Unsplash: pracovní stůl / notebook / káva (atmosféra, ne Aleš)
-- [ ] **Commit:** `Přidej sekci O mně`
+- [x] Fotka (placeholder) + 3–4 lidské věty o Alešovi a přístupu „parťáka“
+- [x] Doplňková fotka z Unsplash: pracovní stůl / notebook / káva (atmosféra, ne Aleš)
+- [x] **Commit:** `Přidej sekci O mně`
 
 ### Task 9: Kontakt + formulář
 
