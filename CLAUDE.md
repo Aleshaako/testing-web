@@ -1,6 +1,6 @@
 # CLAUDE.md – pravidla projektu
 
-Jednostránkový web – osobní prezentace Aleše Rydla (weby + reklama na Facebooku a Instagramu).
+Jednostránkový web – osobní prezentace Aleše Hendrycha (weby + reklama na Facebooku a Instagramu).
 Podrobná specifikace: `docs/specs/2026-11-07-osobni-prezentace-design.md` – **vždy z ní vycházej**.
 Pokud se něco se specifikací nekryje, zeptej se, nedomýšlej.
 

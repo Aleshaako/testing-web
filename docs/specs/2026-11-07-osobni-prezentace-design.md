@@ -1,4 +1,4 @@
-# Specifikace: Osobní prezentace – Aleš Rydl (web + META Ads)
+# Specifikace: Osobní prezentace – Aleš Hendrych (web + META Ads)
 
 Datum: 2026-11-07
 Stav: návrh ke schválení
@@ -59,7 +59,7 @@ README.md           – popis projektu
 Každá sekce má `id` pro navigaci z menu.
 
 1. **Navigace** (`header`)
-   - Vlevo jméno/logo „Aleš Rydl“, vpravo odkazy na sekce + tlačítko „Nezávazná konzultace“
+   - Vlevo jméno/logo „Aleš Hendrych“, vpravo odkazy na sekce + tlačítko „Nezávazná konzultace“
    - Sticky; po odscrollování dostane bílé poloprůhledné pozadí s rozostřením (backdrop-blur) a jemný stín
    - Mobil: hamburger menu s plynulým vysunutím
 
