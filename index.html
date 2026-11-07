@@ -115,8 +115,82 @@
   </header>
 
   <main>
-    <section id="uvod" class="scroll-mt-20">
-      <h2 class="font-display text-3xl font-bold">Úvod</h2>
+    <!-- Hero: -mt-16 vytáhne sekci pod průhlednou navigaci, aby pozadí s bloby začínalo úplně nahoře -->
+    <section id="uvod" class="relative isolate -mt-16 scroll-mt-20 overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-28">
+      <!-- Rozmazané barevné bloby v pozadí (animace v css/custom.css) -->
+      <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+        <div class="blob -top-24 -left-24 size-80 bg-primary-400 sm:size-[28rem]"></div>
+        <div class="blob top-1/3 -right-32 size-72 bg-fuchsia-300 [animation-delay:-6s] sm:size-[26rem]"></div>
+        <div class="blob -bottom-24 left-1/4 size-72 bg-accent-400 [animation-delay:-12s] sm:size-96"></div>
+      </div>
+
+      <div class="mx-auto grid max-w-7xl items-center gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8">
+        <!-- Text -->
+        <div>
+          <p class="inline-flex items-center gap-2 rounded-full border border-primary-200 bg-white/70 px-4 py-1.5 text-xs font-medium text-primary-700 backdrop-blur sm:text-sm">
+            <span class="size-2 rounded-full bg-accent-500" aria-hidden="true"></span>
+            Weby + reklama na Facebooku a Instagramu
+          </p>
+
+          <h1 class="mt-6 font-display text-[clamp(2.5rem,1.4rem+4.5vw,5.5rem)] leading-[1.05] font-extrabold tracking-tight text-slate-900">
+            Postavím vám web a přivedu na něj
+            <span class="bg-gradient-to-r from-primary-600 via-fuchsia-600 to-accent-600 bg-clip-text text-transparent">zákazníky.</span>
+          </h1>
+
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate-600 sm:text-xl">
+            Web i reklamu, která na něj přivede lidi, máte od jednoho člověka.
+            Nemusíte nic koordinovat ani rozumět technice – já se postarám, aby se vám zákazníci ozývali.
+          </p>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a href="#kontakt" class="inline-flex items-center justify-center gap-2 rounded-full bg-accent-600 px-7 py-4 font-semibold text-white shadow-lg shadow-accent-600/25 transition hover:scale-105 hover:bg-accent-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-600">
+              Domluvit konzultaci
+              <svg class="size-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.64l-3.22-3.22a.75.75 0 1 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+            <a href="#reference" class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white/70 px-7 py-4 font-semibold text-slate-900 backdrop-blur transition hover:scale-105 hover:border-primary-600 hover:text-primary-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-600">
+              Ukázky práce
+            </a>
+          </div>
+        </div>
+
+        <!-- Fotka s plovoucími štítky -->
+        <div class="relative mx-auto w-full max-w-[17rem] sm:max-w-sm lg:max-w-md">
+          <!-- Natočená barevná karta za fotkou -->
+          <div class="absolute inset-0 rotate-6 rounded-[2rem] bg-gradient-to-br from-primary-500 via-fuchsia-500 to-accent-500 opacity-90" aria-hidden="true"></div>
+          <!-- DOČASNÉ: zástupná fotka, nahradit skutečnou -->
+          <img src="images/foto-placeholder.svg" alt="Aleš Hendrych" width="400" height="500"
+            class="relative aspect-[4/5] w-full rounded-[2rem] object-cover shadow-2xl shadow-primary-900/20 ring-8 ring-white">
+
+
+          <!-- Štítky: jemně se vznášejí (třída float v css/custom.css), každý s jiným zpožděním -->
+          <div class="float absolute top-8 -left-2 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-xl sm:-left-10">
+            <span class="grid size-10 place-items-center rounded-xl bg-primary-100 text-primary-700" aria-hidden="true">
+              <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg>
+            </span>
+            <span>
+              <span class="block font-display text-lg leading-tight font-bold text-slate-900">+120 %</span>
+              <span class="block text-xs text-slate-600">poptávek</span>
+            </span>
+          </div>
+
+          <div class="float absolute -right-2 bottom-24 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 shadow-xl [animation-delay:-2s] sm:-right-10">
+            <span class="grid size-10 place-items-center rounded-xl bg-accent-400/20 text-accent-700" aria-hidden="true">
+              <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <span>
+              <span class="block font-display text-lg leading-tight font-bold text-slate-900">Do 3 týdnů</span>
+              <span class="block text-xs text-slate-600">hotový web</span>
+            </span>
+          </div>
+
+          <div class="float absolute -bottom-6 left-6 flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2.5 text-sm font-medium text-white shadow-xl [animation-delay:-4s]">
+            <span class="size-2 rounded-full bg-emerald-400" aria-hidden="true"></span>
+            Vše od jednoho člověka
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="proc" class="scroll-mt-20">

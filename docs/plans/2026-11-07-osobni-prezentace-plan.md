@@ -85,12 +85,12 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 **Soubory:** `index.html` (`#uvod`), `css/custom.css` (bloby, vznášení)
 
-- [ ] `h1` „Postavím vám web a přivedu na něj zákazníky.“ – velikost přes `clamp()` (cca 2.5rem mobil → 5.5rem desktop)
-- [ ] Podtitulek, 2 tlačítka (primární akcent → `#kontakt`, sekundární → `#reference`)
-- [ ] Fotka v zaobleném rámu + 2–3 plovoucí štítky („+120 % poptávek“, „Web do 3 týdnů“)
-- [ ] Pozadí: 2–3 rozmazané bloby (indigo, fialová, korál), keyframes pomalý pohyb; štítky jemné vznášení
-- [ ] **Kontrola:** na 375 px je fotka pod textem a nic nepřetéká; působí to „wow“
-- [ ] **Commit:** `Přidej hero sekci s animovaným pozadím`
+- [x] `h1` „Postavím vám web a přivedu na něj zákazníky.“ – velikost přes `clamp()` (cca 2.5rem mobil → 5.5rem desktop)
+- [x] Podtitulek, 2 tlačítka (primární akcent → `#kontakt`, sekundární → `#reference`)
+- [x] Fotka v zaobleném rámu + 2–3 plovoucí štítky („+120 % poptávek“, „Web do 3 týdnů“)
+- [x] Pozadí: 2–3 rozmazané bloby (indigo, fialová, korál), keyframes pomalý pohyb; štítky jemné vznášení
+- [x] **Kontrola:** na 375 px je fotka pod textem a nic nepřetéká; působí to „wow“
+- [x] **Commit:** `Přidej hero sekci s animovaným pozadím`
 
 ### Task 4: Problém → řešení + Služby
 
