@@ -53,6 +53,13 @@
     /* Varianta js: – styl platí jen když běží JavaScript (např. js:invisible) */
     @custom-variant js (:where(.js) &);
 
+    /* Plus Jakarta Sans má v tučném řezu úzké mezery mezi slovy – v nadpisech je trochu rozšíříme */
+    @layer base {
+      h1, h2, h3 {
+        word-spacing: 0.06em;
+      }
+    }
+
     /* Gradient značky (indigová → fialová → korál) – nadpis v hero a primární tlačítka.
        Všechny tři barvy mají s bílým textem dostatečný kontrast. */
     @utility bg-brand-gradient {
@@ -199,12 +206,219 @@
       </div>
     </section>
 
-    <section id="proc" class="scroll-mt-20">
-      <h2 class="font-display text-3xl font-bold">Proč se vám ozve víc zákazníků</h2>
+    <!-- Problém → řešení -->
+    <section id="proc" class="scroll-mt-20 bg-slate-50 py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="text-sm font-semibold tracking-wider text-primary-600 uppercase">Znáte to?</p>
+          <h2 class="mt-3 font-display text-[clamp(2rem,1.5rem+2vw,3rem)] leading-tight font-extrabold tracking-tight text-slate-900">
+            Většina firem naráží na stejné tři problémy
+          </h2>
+        </div>
+
+        <!-- Tři typické problémy -->
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <span class="grid size-12 place-items-center rounded-2xl bg-slate-100 text-slate-700" aria-hidden="true">
+              <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/><path d="M16 3l5 5M21 3l-5 5"/></svg>
+            </span>
+            <h3 class="mt-6 font-display text-xl font-bold text-slate-900">„Web máme, ale nikdo se neozve.“</h3>
+            <p class="mt-3 leading-relaxed text-slate-600">Web vypadá hezky, jenže návštěvníci odcházejí, aniž by zavolali nebo napsali.</p>
+          </article>
+
+          <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <span class="grid size-12 place-items-center rounded-2xl bg-slate-100 text-slate-700" aria-hidden="true">
+              <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l6 6 4-4 8 8M21 11v6h-6"/></svg>
+            </span>
+            <h3 class="mt-6 font-display text-xl font-bold text-slate-900">„Reklamu jsme zkoušeli, nefungovala.“</h3>
+            <p class="mt-3 leading-relaxed text-slate-600">Peníze odešly, poptávky nepřišly. A nikdo vám neumí vysvětlit proč.</p>
+          </article>
+
+          <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <span class="grid size-12 place-items-center rounded-2xl bg-slate-100 text-slate-700" aria-hidden="true">
+              <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5v.01"/></svg>
+            </span>
+            <h3 class="mt-6 font-display text-xl font-bold text-slate-900">„Nevím, komu zavolat.“</h3>
+            <p class="mt-3 leading-relaxed text-slate-600">Webař tvrdí, že chyba je v reklamě. Reklamní agentura, že ve webu. A vy jste uprostřed.</p>
+          </article>
+        </div>
+
+        <!-- Odpověď: web a reklama z jedné ruky -->
+        <div class="relative isolate mt-6 overflow-hidden rounded-3xl bg-primary-900 p-8 text-white sm:p-12">
+          <div class="pointer-events-none absolute -top-24 -right-24 -z-10 size-72 rounded-full bg-fuchsia-500 opacity-40 blur-3xl" aria-hidden="true"></div>
+          <div class="pointer-events-none absolute -bottom-32 left-1/3 -z-10 size-72 rounded-full bg-primary-500 opacity-40 blur-3xl" aria-hidden="true"></div>
+
+          <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p class="text-sm font-semibold tracking-wider text-primary-200 uppercase">Moje řešení</p>
+              <h3 class="mt-3 font-display text-[clamp(1.75rem,1.4rem+1.5vw,2.5rem)] leading-tight font-extrabold">
+                Web a reklama z jedné ruky
+              </h3>
+              <p class="mt-4 text-lg leading-relaxed text-primary-100">
+                Když web i reklamu dělá jeden člověk, do sebe všechno zapadá. Reklama přivede správné lidi
+                a web je přesvědčí, aby se vám ozvali. A když něco nefunguje, víte přesně, komu zavolat.
+              </p>
+            </div>
+
+            <ul class="space-y-4">
+              <li class="flex gap-4 rounded-2xl bg-white/10 p-5 backdrop-blur">
+                <svg class="mt-0.5 size-6 shrink-0 text-emerald-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                <span>Web postavím tak, aby z návštěvníků dělal zákazníky.</span>
+              </li>
+              <li class="flex gap-4 rounded-2xl bg-white/10 p-5 backdrop-blur">
+                <svg class="mt-0.5 size-6 shrink-0 text-emerald-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                <span>Reklamu ukážu lidem, kteří vaše služby opravdu hledají.</span>
+              </li>
+              <li class="flex gap-4 rounded-2xl bg-white/10 p-5 backdrop-blur">
+                <svg class="mt-0.5 size-6 shrink-0 text-emerald-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+                <span>Výsledky průběžně sleduji a vylepšuji – a vy vždycky víte, na čem jste.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="sluzby" class="scroll-mt-20">
-      <h2 class="font-display text-3xl font-bold">Služby</h2>
+    <!-- Služby: bento grid (různě velké dlaždice) + pás s počítadly -->
+    <section id="sluzby" class="scroll-mt-20 py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="text-sm font-semibold tracking-wider text-primary-600 uppercase">Služby</p>
+          <h2 class="mt-3 font-display text-[clamp(2rem,1.5rem+2vw,3rem)] leading-tight font-extrabold tracking-tight text-slate-900">
+            Všechno, co potřebujete, <span class="bg-brand-gradient bg-clip-text text-transparent">od jednoho člověka</span>
+          </h2>
+          <p class="mt-4 text-lg leading-relaxed text-slate-600">
+            Žádné přehazování mezi webařem a agenturou. Postarám se o web, reklamu i o to, aby všechno fungovalo dlouhodobě.
+          </p>
+        </div>
+
+        <!-- Na desktopu: Weby přes 2 sloupce, Reklama přes 2 řádky, dole 2 menší dlaždice -->
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+
+          <!-- Weby -->
+          <article class="flex flex-col rounded-3xl border border-slate-200 bg-slate-50 p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl lg:col-span-2">
+            <div class="grid gap-8 sm:grid-cols-2 sm:items-center">
+              <div>
+                <span class="grid size-12 place-items-center rounded-2xl bg-primary-100 text-primary-700" aria-hidden="true">
+                  <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg>
+                </span>
+                <h3 class="mt-6 font-display text-2xl font-bold text-slate-900">Weby na WordPressu</h3>
+                <p class="mt-3 leading-relaxed text-slate-600">
+                  Moderní web, který funguje skvěle i na mobilu, rychle se načte a vede návštěvníky k tomu, aby se vám ozvali.
+                  Texty a fotky si pak snadno upravíte sami.
+                </p>
+              </div>
+
+              <!-- Mini-ilustrace: náznak webu v okně prohlížeče -->
+              <div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg" aria-hidden="true">
+                <div class="flex items-center gap-1.5 border-b border-slate-100 bg-slate-50 px-3 py-2">
+                  <span class="size-2.5 rounded-full bg-rose-300"></span>
+                  <span class="size-2.5 rounded-full bg-amber-300"></span>
+                  <span class="size-2.5 rounded-full bg-emerald-300"></span>
+                  <span class="ml-2 h-3.5 flex-1 rounded bg-slate-200/70"></span>
+                </div>
+                <div class="grid grid-cols-5 gap-4 p-5">
+                  <div class="col-span-3 space-y-2.5">
+                    <div class="h-3 w-4/5 rounded bg-slate-800"></div>
+                    <div class="h-3 w-1/2 rounded bg-slate-800"></div>
+                    <div class="h-2 w-full rounded bg-slate-200"></div>
+                    <div class="h-2 w-5/6 rounded bg-slate-200"></div>
+                    <div class="mt-4 h-6 w-20 rounded-full bg-brand-gradient"></div>
+                  </div>
+                  <div class="col-span-2 rounded-lg bg-gradient-to-br from-primary-200 to-fuchsia-200"></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Reklama -->
+          <article class="relative isolate flex flex-col overflow-hidden rounded-3xl bg-primary-900 p-8 text-white transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary-900/30 lg:row-span-2">
+            <div class="pointer-events-none absolute -top-20 -right-20 -z-10 size-60 rounded-full bg-fuchsia-500 opacity-40 blur-3xl" aria-hidden="true"></div>
+            <span class="grid size-12 place-items-center rounded-2xl bg-white/15 text-white" aria-hidden="true">
+              <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+            </span>
+            <h3 class="mt-6 font-display text-2xl font-bold">Reklama na Facebooku a Instagramu</h3>
+            <p class="mt-3 leading-relaxed text-primary-100">
+              Vaši nabídku ukážu lidem ve vašem okolí, kteří ji opravdu hledají. Platíte za výsledky, ne za pokusy naslepo.
+            </p>
+
+            <!-- Mini-ilustrace: rostoucí sloupcový graf -->
+            <div class="mt-10 rounded-2xl bg-white/10 p-5 lg:mt-auto" aria-hidden="true">
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-primary-100">Poptávky</span>
+                <span class="rounded-full bg-emerald-400/20 px-2.5 py-0.5 font-semibold text-emerald-300">+85 %</span>
+              </div>
+              <div class="mt-4 flex h-32 items-end gap-2">
+                <div class="h-[30%] flex-1 rounded-t-md bg-white/25"></div>
+                <div class="h-[42%] flex-1 rounded-t-md bg-white/25"></div>
+                <div class="h-[38%] flex-1 rounded-t-md bg-white/25"></div>
+                <div class="h-[58%] flex-1 rounded-t-md bg-white/40"></div>
+                <div class="h-[72%] flex-1 rounded-t-md bg-white/60"></div>
+                <div class="h-full flex-1 rounded-t-md bg-gradient-to-t from-fuchsia-500 to-accent-400"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Průběžná péče -->
+          <article class="flex flex-col rounded-3xl border border-slate-200 bg-slate-50 p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <span class="grid size-12 place-items-center rounded-2xl bg-primary-100 text-primary-700" aria-hidden="true">
+              <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+            </span>
+            <h3 class="mt-6 font-display text-xl font-bold text-slate-900">Průběžná péče</h3>
+            <p class="mt-3 leading-relaxed text-slate-600">
+              Aktualizace, zálohy i drobné úpravy. O web se starám i po spuštění, takže nemusíte řešit nic technického.
+            </p>
+            <!-- Mini-ilustrace: odškrtaný seznam -->
+            <div class="mt-6 space-y-2.5 rounded-2xl bg-white p-4 shadow-sm" aria-hidden="true">
+              <div class="flex items-center gap-3"><span class="size-4 rounded-full bg-emerald-400"></span><span class="h-2 w-3/4 rounded bg-slate-200"></span></div>
+              <div class="flex items-center gap-3"><span class="size-4 rounded-full bg-emerald-400"></span><span class="h-2 w-1/2 rounded bg-slate-200"></span></div>
+              <div class="flex items-center gap-3"><span class="size-4 rounded-full bg-emerald-400"></span><span class="h-2 w-2/3 rounded bg-slate-200"></span></div>
+            </div>
+          </article>
+
+          <!-- Měření výsledků -->
+          <article class="flex flex-col rounded-3xl border border-slate-200 bg-slate-50 p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <span class="grid size-12 place-items-center rounded-2xl bg-primary-100 text-primary-700" aria-hidden="true">
+              <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+            </span>
+            <h3 class="mt-6 font-display text-xl font-bold text-slate-900">Měření výsledků</h3>
+            <p class="mt-3 leading-relaxed text-slate-600">
+              Každý měsíc srozumitelný přehled: kolik lidí přišlo, kolik se jich ozvalo a kolik vás to stálo.
+            </p>
+            <!-- Mini-ilustrace: dva vodorovné ukazatele -->
+            <div class="mt-6 space-y-3 rounded-2xl bg-white p-4 text-xs text-slate-600 shadow-sm" aria-hidden="true">
+              <div>
+                <span>Návštěvy</span>
+                <div class="mt-1 h-2 rounded-full bg-slate-100"><div class="h-full w-4/5 rounded-full bg-primary-500"></div></div>
+              </div>
+              <div>
+                <span>Poptávky</span>
+                <div class="mt-1 h-2 rounded-full bg-slate-100"><div class="h-full w-3/5 rounded-full bg-accent-500"></div></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Pás s počítadly. DOČASNÉ: smyšlená čísla, nahradit skutečnými.
+             V HTML je cílová hodnota, aby byla vidět i bez JavaScriptu. -->
+        <dl class="mt-6 grid gap-8 rounded-3xl bg-brand-gradient px-8 py-10 text-center text-white sm:grid-cols-3 sm:gap-4">
+          <div>
+            <dt class="sr-only">Počet webů</dt>
+            <dd class="font-display text-5xl font-extrabold sm:text-4xl lg:text-5xl"><span data-counter="40" data-counter-suffix="+">40+</span></dd>
+            <dd class="mt-2 font-medium">spuštěných webů</dd>
+          </div>
+          <div>
+            <dt class="sr-only">Rozpočet v reklamě</dt>
+            <dd class="font-display text-5xl font-extrabold sm:text-4xl lg:text-5xl"><span data-counter="2" data-counter-suffix=" mil. Kč">2 mil. Kč</span></dd>
+            <dd class="mt-2 font-medium">spravovaných v reklamě</dd>
+          </div>
+          <div>
+            <dt class="sr-only">Zkušenosti</dt>
+            <dd class="font-display text-5xl font-extrabold sm:text-4xl lg:text-5xl"><span data-counter="8">8</span></dd>
+            <dd class="mt-2 font-medium">let zkušeností</dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
     <section id="spoluprace" class="scroll-mt-20">

@@ -96,12 +96,12 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 **Soubory:** `index.html` (`#proc`, `#sluzby`), `js/main.js` (`initCounters`)
 
-- [ ] `#proc`: 3 karty s problémy + blok s odpovědí (texty dle specifikace, lidský tón)
-- [ ] `#sluzby`: nadpis „vše od jednoho člověka“, bento grid (2 velké dlaždice: Weby, Reklama; 2 menší: Průběžná péče, Měření výsledků), inline SVG ikony, CSS mini-ilustrace (náznak webu, sloupcový graf)
-- [ ] Pás počítadel: `data-counter="40" data-counter-suffix="+"` (weby), 2 mil. Kč (reklama), 8 let
-- [ ] `initCounters()`: při vstupu do viewportu napočítá 0 → cíl za ~1,5 s (jen jednou); při reduced-motion rovnou cílová hodnota; bez JS je v HTML vidět cílová hodnota
-- [ ] **Kontrola:** bento se na mobilu skládá pod sebe; počítadla běží jen jednou
-- [ ] **Commit:** `Přidej sekce Problém a Služby s počítadly`
+- [x] `#proc`: 3 karty s problémy + blok s odpovědí (texty dle specifikace, lidský tón)
+- [x] `#sluzby`: nadpis „vše od jednoho člověka“, bento grid (2 velké dlaždice: Weby, Reklama; 2 menší: Průběžná péče, Měření výsledků), inline SVG ikony, CSS mini-ilustrace (náznak webu, sloupcový graf)
+- [x] Pás počítadel: `data-counter="40" data-counter-suffix="+"` (weby), 2 mil. Kč (reklama), 8 let
+- [x] `initCounters()`: při vstupu do viewportu napočítá 0 → cíl za ~1,5 s (jen jednou); při reduced-motion rovnou cílová hodnota; bez JS je v HTML vidět cílová hodnota
+- [x] **Kontrola:** bento se na mobilu skládá pod sebe; počítadla běží jen jednou
+- [x] **Commit:** `Přidej sekce Problém a Služby s počítadly`
 
 ### Task 5: Jak spolupracujeme
 
