@@ -1,0 +1,23 @@
+# macOS systémové soubory
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+.DocumentRevisions-V100
+.VolumeIcon.icns
+Icon?
+
+# Editory
+.vscode/
+.idea/
+*.swp
+
+# Lokální nastavení Claude Code (osobní, nesdílet)
+.claude/settings.local.json
+
+# Pro budoucí build Tailwindu
+node_modules/
