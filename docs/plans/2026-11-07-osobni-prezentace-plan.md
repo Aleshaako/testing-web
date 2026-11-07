@@ -188,11 +188,11 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 **Soubory:** `README.md`, opravy kdekoli
 
-- [ ] Projít web na 320 / 375 / 768 / 1440 px (bod 5 Review Focus)
-- [ ] Lighthouse v Chrome DevTools (Accessibility, Best Practices, SEO) – opravit nálezy
-- [ ] Console bez chyb
-- [ ] `README.md`: co projekt je, jak ho spustit lokálně, seznam dočasného obsahu (tabulka ze specifikace)
-- [ ] **Commit:** `Doplň README a oprav nálezy z kontroly`
+- [x] Projít web na 320 / 375 / 768 / 1440 px (bod 5 Review Focus)
+- [x] Lighthouse v Chrome DevTools (Accessibility, Best Practices, SEO) – opravit nálezy
+- [x] Console bez chyb
+- [x] `README.md`: co projekt je, jak ho spustit lokálně, seznam dočasného obsahu (tabulka ze specifikace)
+- [x] **Commit:** `Doplň README a oprav nálezy z kontroly`
 
 ### Task 12: Zveřejnění na GitHubu
 
