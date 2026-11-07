@@ -49,6 +49,7 @@ V kódu je označený komentářem `DOČASNÉ`.
 | Čísla v počítadlech (40+ webů, 2 mil. Kč, 8 let) | smyšlená |
 | Otázky a odpovědi v FAQ (včetně cen) | smyšlené |
 | Kontaktní formulář | není napojený, nic neodesílá |
+| Skrytí před vyhledávači | `<meta name="robots" content="noindex, nofollow">` v `index.html` – před ostrým spuštěním smazat |
 
 ## Plánované další kroky
 
