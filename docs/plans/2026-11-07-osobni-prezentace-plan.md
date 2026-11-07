@@ -196,8 +196,12 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 ### Task 12: Zveřejnění na GitHubu
 
-- [ ] **Zeptat se uživatele na souhlas** s vytvořením veřejného repozitáře a pushem
-- [ ] `gh repo create github-testing --public --source=. --push`
-- [ ] Zapnout GitHub Pages: `gh api repos/{owner}/github-testing/pages -X POST -f "source[branch]=main" -f "source[path]=/"`
-- [ ] Počkat 1–2 minuty, ověřit `https://<uživatel>.github.io/github-testing/` (CSS, JS, obrázky se načítají – relativní cesty)
-- [ ] Vysvětlit uživateli: repozitář, push, GitHub Pages, jak se web aktualizuje (commit + push = nová verze online)
+> **Provedeno:** repozitář vytvořil Aleš přes web GitHubu jako `Aleshaako/testing-web` (s automatickým
+> README). Historie z počítače ho nahradila (`git push --force-with-lease`), Pages běží na
+> https://aleshaako.github.io/testing-web/ – web má `noindex`, aby se nedostal do vyhledávačů.
+
+- [x] **Zeptat se uživatele na souhlas** s vytvořením veřejného repozitáře a pushem
+- [x] `gh repo create github-testing --public --source=. --push`
+- [x] Zapnout GitHub Pages: `gh api repos/{owner}/github-testing/pages -X POST -f "source[branch]=main" -f "source[path]=/"`
+- [x] Počkat 1–2 minuty, ověřit `https://<uživatel>.github.io/github-testing/` (CSS, JS, obrázky se načítají – relativní cesty)
+- [x] Vysvětlit uživateli: repozitář, push, GitHub Pages, jak se web aktualizuje (commit + push = nová verze online)
