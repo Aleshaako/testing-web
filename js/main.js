@@ -47,8 +47,29 @@ function initNav() {
   });
 }
 
-// Plynulé najetí prvků při scrollování (Task 10)
-function initReveal() {}
+// Plynulé najetí prvků s atributem data-reveal, když je doscrollujete.
+// data-reveal-delay="100" = zpoždění v milisekundách (karty v mřížce najíždějí postupně).
+function initReveal() {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Bez animací (nebo ve starém prohlížeči) necháme všechno rovnou vidět
+  if (reduceMotion || !('IntersectionObserver' in window)) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target); // každý prvek najede jen jednou
+    });
+  }, { rootMargin: '0px 0px -10% 0px' });
+
+  document.querySelectorAll('[data-reveal]').forEach((element) => {
+    element.style.animationDelay = (element.dataset.revealDelay || 0) + 'ms';
+    observer.observe(element);
+  });
+
+  // Teprve teď prvky skryjeme (viz css/custom.css)
+  document.documentElement.classList.add('reveal-ready');
+}
 
 // Animovaná počítadla: při doscrollování napočítají od 0 do cílové hodnoty (jen jednou).
 // Cílová hodnota je v atributu data-counter, přípona (např. „+“) v data-counter-suffix.

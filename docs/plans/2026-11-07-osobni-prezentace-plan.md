@@ -173,12 +173,16 @@ Místo automatických testů kontrolujeme v prohlížeči:
 
 **Soubory:** `index.html` (doplnit `data-reveal`), `css/custom.css`, `js/main.js` (`initReveal`)
 
-- [ ] CSS: `.js [data-reveal]` skryté (průhlednost 0, posun 24 px dolů), `.is-visible` plně viditelné, přechod ~0,7 s
-- [ ] `initReveal()`: `IntersectionObserver` přidá `is-visible` a přestane prvek sledovat; respektuje `data-reveal-delay`
-- [ ] `@media (prefers-reduced-motion: reduce)`: vše viditelné, bez animací (reveal, bloby, štítky, smooth scroll)
-- [ ] Doplnit `data-reveal` na nadpisy sekcí a karty (postupné zpoždění 0/100/200 ms)
-- [ ] **Kontrola:** bod 1 z Review Focus (vypnout JS v DevTools → vše vidět); reduced-motion emulace v DevTools → žádný pohyb
-- [ ] **Commit:** `Přidej plynulé animace při scrollování`
+- [x] CSS: `.js [data-reveal]` skryté (průhlednost 0, posun 24 px dolů), `.is-visible` plně viditelné, přechod ~0,7 s
+- [x] `initReveal()`: `IntersectionObserver` přidá `is-visible` a přestane prvek sledovat; respektuje `data-reveal-delay`
+- [x] `@media (prefers-reduced-motion: reduce)`: vše viditelné, bez animací (reveal, bloby, štítky, smooth scroll)
+- [x] Doplnit `data-reveal` na nadpisy sekcí a karty (postupné zpoždění 0/100/200 ms)
+- [x] **Kontrola:** bod 1 z Review Focus (vypnout JS v DevTools → vše vidět); reduced-motion emulace v DevTools → žádný pohyb
+- [x] **Commit:** `Přidej plynulé animace při scrollování`
+
+> **Poznámka k provedení:** prvky skrývá až třída `reveal-ready`, kterou přidá `initReveal()` (ne `.js` –
+> kdyby se `main.js` nenačetl, obsah by zůstal neviditelný). Najetí je CSS animace `@keyframes reveal`,
+> ne `transition` – přechod by přebil plynulé hover efekty karet.
 
 ### Task 11: Závěrečná kontrola + README
 

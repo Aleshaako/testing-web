@@ -30,11 +30,31 @@
   50%      { transform: translateY(-10px); }
 }
 
+/* ---------- Animace při scrollování (prvky s atributem data-reveal) ----------
+   Třídu reveal-ready přidá na <html> až funkce initReveal() v main.js. Když se JavaScript
+   nenačte, prvky se neskryjí a obsah zůstane vidět. Když prvek doscrollujete,
+   JS mu přidá třídu is-visible a spustí se animace. */
+
+.reveal-ready [data-reveal]:not(.is-visible) {
+  opacity: 0;
+}
+
+.reveal-ready [data-reveal].is-visible {
+  animation: reveal 0.7s ease-out both;
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: none; }
+}
+
 /* ---------- Vypnuté animace pro lidi, kteří je mají vypnuté v systému ---------- */
 
 @media (prefers-reduced-motion: reduce) {
-  .blob,
-  .float {
-    animation: none;
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }
